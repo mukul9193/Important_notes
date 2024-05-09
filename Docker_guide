@@ -1,0 +1,50 @@
+docker images          # view all images
+docker rmi <image_id>        # delete particular image
+
+docker compose up              # to up  the compose file in prject 
+docker compose down            # down the container
+
+docker ps -a          #list all the create or exit or up container
+docker rm <conatiner_id>            #delete the conatiner
+
+docker stop <container_id>         #stop the running container
+docker exec   -it <container_id> bash      #execute a command in a running container 
+
+
+docker pull  #pull the image from the dockerhub
+
+docker search <image_name > #searches for specific images through the Docker hub
+
+docker kill <conatainer_id>    # stop the container immediately by killing its execution
+
+docker login #log into your docker hub
+
+
+docker network ls    #know the details of the list of networks in the cluster
+
+Docker logs   #view the log of running conatiner
+
+
+docker volume create   #docker container can use it to store data
+
+Docker logout     # logout from docker hub
+
+
+docker tag apache/superset:2.1.0 mukul_username/superset:2.1.0  #change the image name 
+
+docker push mukul_username/superset:2.1.0     # push the local image on dockerhub
+
+docker system prune -a --volumes    #Remove all container or images 
+
+
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)    #remove all container
+
+
+docker build --tag 2.1.2 .
+docker tag 2.1.2 mukul9193/dqp_insight:2.1.2
+docker push mukul9193/dqp_insight:2.1.2
+
+
+
+
+ docker volume rm superset_db_home    # delete the volume of container
