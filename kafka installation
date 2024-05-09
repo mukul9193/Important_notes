@@ -1,0 +1,31 @@
+
+sudo apt install openjdk-8-jdk
+ download kafka from official website and unzip the tar file and add in home 
+ then go to terminal and type  nano .bashrc
+ 
+ and add at buttom   export PATH=\home\mukul\kafka\kafka_2.13-3.6.1\bin:$PATH
+
+
+create "data" one folder inside kafka inside created folder we add two folder server and zookeeper
+
+and go to config file and nano zookeeper.properties and give the path of zookeeper folder path and server.properties and giev the path of server folder
+
+
+toi start the zoopkeeper   bin/zookeeper-server-start.sh config/zookeeper.properties
+
+to Start the Kafka broker service       bin/kafka-server-start.sh config/server.properties 
+
+
+TO create topics  kafka-topics.sh --bootstrap-server localhost:9092 --partitions 2 --replication-factor 1 --topic firsttopic --create
+
+to list topics kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+TO know details of topics ./kafka-topics.sh --bootstrap-server localhost:9092 --topic firsttopic --describe
+
+
+for delete topics ./kafka-topics.sh --bootstrap-server localhost:9092 --topic firsttopic --delete
+
+//// PRODUCER    
+
+kafka-console-producer.sh  --bootstrap-server localhost:9092 --topic firsttopic
+
